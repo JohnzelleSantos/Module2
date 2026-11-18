@@ -1,4 +1,3 @@
-
 <?php
 /* Student: Santos, Johnzelle L. */
 
@@ -38,7 +37,10 @@ $contact = array(
     "Hours" => "Mon - Fri: 10:00 AM - 10:00 PM, Sat - Sun: 9:00 AM - 11:00 PM"
 );
 
+$orderSubmitted = false;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $orderSubmitted = true;
     $order = array(
         "customer" => htmlspecialchars($_POST["customer"]),
         "type"     => (int)$_POST["type"],
@@ -52,8 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         isset($_POST["toppings"][2]) ? 1 : 0
     );
 } else {
-    $order  = array("customer" => "Juan Dela Cruz", "type" => 1, "product" => 0, "qty" => 2, "budget" => 500);
-    $picked = array(1, 0, 1);                
+    $order  = array("customer" => "", "type" => 0, "product" => 0, "qty" => 1, "budget" => 0);
+    $picked = array(0, 0, 0);                
 }
 
 $welcome = "Welcome to " . $storeName . "! " . $tagline . ".";
@@ -259,6 +261,7 @@ for ($i = 0; $i < 4; $i++) {
     </form>
   </section>
 
+<?php if ($orderSubmitted) { ?>
   <section class="card">
     <h2>Order Slip</h2>
 <?php
@@ -315,6 +318,7 @@ $change     = $order["budget"] - $finalTotal;
     <p class="result bad"><?php echo "Not enough budget. You need Php " . (0 - $change) . " more."; ?></p>
 <?php } ?>
   </section>
+<?php } ?>
 
   <div class="grid">
 
@@ -352,6 +356,10 @@ do {
     <section class="card">
       <h2>Store Checker</h2>
 <?php
+// If not yet submitted, set dummy finalTotal for checking questions to avoid notices
+if (!$orderSubmitted) {
+    $finalTotal = 0;
+}
 $questions = array(
     "Budget is enough for the order?",
     "Is the order total exactly Php 500?",
