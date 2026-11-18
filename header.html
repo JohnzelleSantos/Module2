@@ -1,1 +1,150 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fanteasy | Text-Based Store</title>
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+body{
+  font-family:Georgia, "Times New Roman", serif;
+  color:#f3edfb;
+  min-height:100vh;
+  padding:32px 16px;
+  background:radial-gradient(ellipse at 20% 0%, #4c1d95 0%, transparent 55%), radial-gradient(ellipse at 85% 100%, #6d28d9 0%, transparent 50%), #0c0517;
+}
+.page{
+  max-width:960px;
+  margin:0 auto;
+}
+h1{
+  font-size:2.6rem;
+  font-weight:400;
+  text-align:center;
+  text-shadow:2px 3px 2px rgba(139,92,246,.7), 6px 9px 10px rgba(109,40,217,.6);
+}
+.welcome{
+  text-align:center;
+  color:#b9acd0;
+  margin:10px 0 28px;
+}
+.card{
+  background:rgba(20,10,37,.85);
+  border:1px solid rgba(183,148,244,.25);
+  border-radius:16px;
+  padding:22px;
+  margin-bottom:22px;
+  overflow-x:auto;
+}
+h2{
+  font-size:1.4rem;
+  font-weight:400;
+  color:#b794f4;
+  margin-bottom:14px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.92rem;
+}
+th{
+  text-align:left;
+  color:#b794f4;
+  border-bottom:2px solid rgba(183,148,244,.35);
+  padding:10px 8px;
+}
+td{
+  border-bottom:1px solid rgba(183,148,244,.15);
+  padding:10px 8px;
+}
+tr:hover td{
+  background:rgba(183,148,244,.08);
+}
+.num{
+  text-align:right;
+}
+tfoot td{
+  color:#b794f4;
+  font-weight:bold;
+  border-bottom:0;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:22px;
+}
+p.line{
+  padding:6px 0;
+  border-bottom:1px dashed rgba(183,148,244,.2);
+  font-size:.92rem;
+}
+footer{
+  text-align:center;
+  color:#b9acd0;
+  font-size:.8rem;
+  margin-top:10px;
+}
+.hint{
+  color:#b9acd0;
+  font-size:.8rem;
+  margin-top:12px;
+}
+.badge{
+  display:inline-block;
+  padding:2px 12px;
+  border-radius:999px;
+  font-size:.75rem;
+  font-weight:bold;
+}
+.badge.ok{
+  background:rgba(74,222,128,.15);
+  color:#86efac;
+}
+.badge.low{
+  background:rgba(250,204,21,.15);
+  color:#fde047;
+}
+.badge.bad{
+  background:rgba(255,77,79,.15);
+  color:#ff8a8c;
+}
+.stamps{
+  font-size:1.6rem;
+  color:#b794f4;
+  letter-spacing:6px;
+}
+.status{
+  text-align:center;
+  font-size:.85rem;
+  color:#b794f4;
+  margin-bottom:22px;
+}
+.result{
+  margin-top:16px;
+  padding:12px 14px;
+  border-radius:8px;
+  font-weight:bold;
+}
+.result.ok{
+  background:rgba(74,222,128,.12);
+  color:#86efac;
+}
+.result.bad{
+  background:rgba(255,77,79,.12);
+  color:#ff8a8c;
+}
+@media (max-width:640px){
+  h1{
+    font-size:2rem;
+  }
+  table{
+    font-size:.8rem;
+  }
+}
+</style>
+</head>
+<body>
