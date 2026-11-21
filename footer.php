@@ -1,4 +1,5 @@
 <?php
+// Name : Santos Johnzelle L.
 $navLinks = '<nav class="nav">'
     . '<a href="index.php"' . (($currentPage == "home") ? ' class="active"' : '') . '>Home</a>'
     . '<a href="menu.php"' . (($currentPage == "menu") ? ' class="active"' : '') . '>Menu</a>'
