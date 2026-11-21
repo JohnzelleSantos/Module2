@@ -38,7 +38,6 @@ h1{
   border-radius:16px;
   padding:22px;
   margin-bottom:22px;
-  overflow-x:auto;
 }
 h2{
   font-size:1.4rem;
@@ -81,6 +80,10 @@ p.line{
   padding:6px 0;
   border-bottom:1px dashed rgba(183,148,244,.2);
   font-size:.92rem;
+}
+code{
+  font-family:"Courier New", monospace;
+  color:#e9d8fd;
 }
 footer{
   text-align:center;
@@ -136,6 +139,57 @@ footer{
 .result.bad{
   background:rgba(255,77,79,.12);
   color:#ff8a8c;
+}
+.card{
+  overflow-x:auto;
+}
+.nav{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:26px;
+  margin-bottom:26px;
+}
+.nav a{
+  color:#b9acd0;
+  text-decoration:none;
+  font-size:.92rem;
+  padding-bottom:4px;
+  border-bottom:2px solid transparent;
+}
+.nav a:hover,
+.nav a.active{
+  color:#b794f4;
+  border-bottom-color:#b794f4;
+}
+.btns{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:20px;
+}
+.btn{
+  display:inline-block;
+  padding:11px 26px;
+  border-radius:999px;
+  background:#b794f4;
+  color:#1b0a33;
+  text-decoration:none;
+  font-size:.85rem;
+  font-weight:bold;
+}
+.btn.ghost{
+  background:transparent;
+  color:#f3edfb;
+  border:1px solid rgba(183,148,244,.4);
+}
+.card p.text{
+  color:#b9acd0;
+  margin-bottom:12px;
+}
+small{
+  color:#b9acd0;
 }
 @media (max-width:640px){
   h1{
