@@ -1,5 +1,5 @@
 <?php
-/* Student: Santos, Johnzelle L. */
+// Name : Santos Johnzelle L.
 declare(strict_types=1);
 
 $currentPage = "functions";
