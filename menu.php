@@ -1,5 +1,5 @@
 <?php
-/* Student: Santos, Johnzelle L. */
+// Name : Santos Johnzelle L.
 $currentPage = "menu";
 include 'header.html';
 include 'footer.php';
